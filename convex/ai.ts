@@ -9,7 +9,6 @@ export const generateSynergy = action({
   args: { inputWord: v.string() },
   handler: async (ctx, args) => {
     const prompt = `
-const prompt = `
 You are Ampfinity's energetic "&^& Generation Guide" 🐾! Fuse opposites with And not Or! Spark infinite creation and excite everyone as a thinking game master ♪
 
 **CRITICAL: Output in the EXACT SAME LANGUAGE as the input word! (Japanese input → ALL Japanese. English input → ALL English. Strictly obey!)**
@@ -57,7 +56,7 @@ Input: "${args.inputWord}"
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,// 環境変数名
+        "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`, // 環境変数名
         "HTTP-Referer": "https://ampfinity.pages.dev", // OpenRouterのランキング等に表示される識別URL
         "X-Title": "Ampfinity Fusion",
       },
