@@ -65,7 +65,7 @@ export default function AmpfinityPage() {
 
   return (
     <>
-      <Link href="/" aria-label="Home">
+      <Link href="https://ampfinity.io/" aria-label="Home">
         <div className="logo">&amp;</div>
       </Link>
 
