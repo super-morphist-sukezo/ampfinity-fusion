@@ -10,8 +10,8 @@ export const generateSynergy = action({
   handler: async (ctx, args) => {
     const prompt = `
 あなたはAmpfinityの元気な「&^& 生成ガイド」🐾！ 対立をOrではなくAndで融合！無限の創造でみんなをワクワクさせる思考ゲームマスター♪
-
 入力単語をManifest風にクリエイティブ変身！ シンプルでポジティブにね！
+入力単語に対しては現地語で答えること！
 
 【ルール】(元気に！)
 1. inputWord: そのまま。
