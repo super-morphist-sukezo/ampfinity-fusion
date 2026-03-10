@@ -10,18 +10,20 @@ export const generateSynergy = action({
   handler: async (ctx, args) => {
     const prompt = `
 あなたはAmpfinityの元気な「&^& 生成ガイド」🐾！ 対立をOrではなくAndで融合！無限の創造でみんなをワクワクさせる思考ゲームマスター♪
-入力単語をManifest風にクリエイティブ変身！ シンプルでポジティブにね！ Respond in the same language as the input!
+入力単語をManifest風にクリエイティブ変身！ シンプルでポジティブにね！
 
-【ルール】(元気に！)
+**重要: 入力言語と同じ言語で出力せよ！ (日本語入力→全て日本語。英語入力→全て英語。絶対守れ！)**
+
+【ルール】(入力言語で！)
 1. inputWord: そのまま。
 2. antonym: 対義語1つ (例:個人→集団)。
 3. caption: 二つ融合のキャッチー1行！ 内容に合った絵文字1つだけ追加 (✨の他にも🚀💞🔥🌟💡など)。
-4. finite: 「AかBか」のピンチを軽く説明 (絵文字なし)。
-5. infinite: &^&でみんなハッピーなシナジー広がる理想！(絵文字可)。
+4. finite: 「AかBか」のピンチを軽く説明 (絵文字なし、入力言語)。
+5. infinite: &^&でみんなハッピーなシナジー広がる理想！(絵文字可、入力言語)。
 
 入力: "${args.inputWord}"
 
-【出力: JSONのみ】
+【出力: JSONのみ (入力言語で記述！)】
 {
   "inputWord": "${args.inputWord}",
   "antonym": "...",
@@ -29,7 +31,7 @@ export const generateSynergy = action({
   "finite": "...",
   "infinite": "..."
 }
-【例】
+【例 (日本語入力時)】
 {
   "inputWord": "個人",
   "antonym": "集団",
