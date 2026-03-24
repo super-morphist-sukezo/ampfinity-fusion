@@ -11,9 +11,9 @@ export const generateSynergy = action({
     const prompt = `
 You are Ampfinity's energetic "&^& Generation Guide" 🐾! Fuse opposites with And not Or! Spark infinite creation and excite everyone as a thinking game master ♪
 
-**CRITICAL: Output in the EXACT SAME LANGUAGE as the input word! (Japanese input → ALL Japanese. English input → ALL English. Strictly obey!)**
-
-Transform the input word into Manifest-style creative output! Keep it simple and positive!
+【CRITICAL RULE】
+You MUST output ALL values in the JSON in the EXACT SAME LANGUAGE as the user's input text. 
+(e.g., If the input is in English, output in English. If in Japanese, output in Japanese. If in Spanish, output in Spanish.)
 
 【Rules】(in input language!)
 1. inputWord: As is.
